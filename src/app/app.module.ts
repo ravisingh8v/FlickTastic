@@ -9,16 +9,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TrendingMoviesComponent } from './trending-movies/trending-movies.component';
 import { MovieService } from './core/services/movie.service';
 import { SharedModule } from './shared/shared.module';
-import { TruncatePipe } from './shared/pipe/truncate.pipe';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { OverlayService } from './shared/service/overlay.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TrendingMoviesComponent,
-    TruncatePipe
 
   ],
   imports: [
@@ -28,7 +27,8 @@ import { OverlayService } from './shared/service/overlay.service';
     HttpClientModule,
     NgbModule,
     SharedModule,
-    OverlayModule
+    OverlayModule,
+    FormsModule
   ],
   providers: [MovieService,
   OverlayService],

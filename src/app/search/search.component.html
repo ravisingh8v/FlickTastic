@@ -1,11 +1,17 @@
 <div class="container">
     <div class="pt-5 pb-2 text-secondary">
-        <h3>Trending Movies</h3>
+        <h3>Search Movies or Tv Series</h3>
+        <form action="">
+            <span class="rounded bg-warning d-flex align-items-center">
+                <input type="text" (keyup)="onSearch($event)" placeholder="search movie" class="form-control">
+                <span class="cursor-pointer p-2 icon icon-search" ></span></span>
+        </form>
     </div>
     <!-- cards section  -->
-    <section class="card-container">
-        <div class="row gx-0">
-            <div class="col-3 my-3" *ngFor="let trending of allTrending">
+    <div class="text-center mt-4 text-primary" *ngIf="searchText.length<=0">Search Your Favourite Movie or Web Show Here</div>
+    <section class="card-container" *ngIf="searchText.length>0">
+        <div class="row gx-0" *ngIf="(allTrending | filter : searchText) as result">
+            <div class="col-3 my-3" *ngFor="let trending of result" >
                 <div
                     class="card p-2 mx-2 position-relative rounded bg-opacity-25 bg-dark d-flex flex-column align-items-center justify-content-center cursor-pointer" (click)="onDetails(trending.id)">
                     <div class="image-wrapper rounded-top">
@@ -21,6 +27,7 @@
                     <div class="ratings position-absolute">{{trending.vote_average| number:'1.2-2'}}</div>
                 </div>
             </div>
+            <div *ngIf="result.length === 0" class="text-warning text-center mt-5 fs-3">No Result Found</div>
         </div>
     </section>
 </div>

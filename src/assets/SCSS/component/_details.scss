@@ -1,0 +1,23 @@
+.overlay-panel{
+    width: 80%;
+    height: 80%;
+}
+.overlay-backdrop{
+    background-color: rgba(0, 0, 0, 0.603);
+}
+.details-wrapper{
+    .image-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

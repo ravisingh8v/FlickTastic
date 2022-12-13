@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="pt-5 pb-2 text-secondary">
+        <h3>Trending Movies</h3>
+    </div>
+    <!-- cards section  -->
+    <section class="card-container">
+        <div class="row gx-0">
+            <div class="col-3 my-3" *ngFor="let movie of allTrending">
+                <div
+                    class="card p-2 pt-3 mx-2 position-relative rounded bg-opacity-25 bg-dark d-flex flex-column align-items-center justify-content-center cursor-pointer" (click)="onDetails(movie.id)">
+                    <div class="image-wrapper rounded-top">
+                        <img class="" src="{{'https://image.tmdb.org/t/p/w500'+movie.poster_path}}" alt="">
+                    </div>
+                    <div class="p-2 pt-2 w-100 d-flex flex-column justify-content-around">
+                        <span class="date d-block text-end">{{movie.release_date}}</span>
+                        <span class="fw-semibold text-nowrap">{{movie.title | truncate:[25,'...']}}</span>
+                    </div>
+                    <div class="ratings position-absolute">{{movie.vote_average}}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

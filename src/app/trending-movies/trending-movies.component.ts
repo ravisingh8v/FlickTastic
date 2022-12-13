@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../core/services/movie.service';
 import { DetailsComponent } from '../shared/components/details/details.component';
+import { CommunicationService } from '../shared/service/communication.service';
 import { OverlayService } from '../shared/service/overlay.service';
 
 @Component({
@@ -12,13 +13,15 @@ export class TrendingMoviesComponent implements OnInit {
   public allTrending: any[] = [];
   public allGenre:any[]=[];
   constructor(private trendingMovie: MovieService,
-    private overlay:OverlayService) { }
+    private overlay:OverlayService,
+    public activePage:CommunicationService) { }
 
   ngOnInit(): void {
     this.getTrendingMovie()
+    this.activePage.activePage.next('trending')
   }
   getTrendingMovie() {
-    this.trendingMovie.getLatestMovie().subscribe((res: any) => {
+    this.trendingMovie.getTrendingMovie().subscribe((res: any) => {
       this.allTrending = res.results;
       console.log(this.allTrending);
 

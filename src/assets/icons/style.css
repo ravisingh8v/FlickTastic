@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'flicktastic';
-  src:  url('fonts/flicktastic.eot?lsyqba');
-  src:  url('fonts/flicktastic.eot?lsyqba#iefix') format('embedded-opentype'),
-    url('fonts/flicktastic.ttf?lsyqba') format('truetype'),
-    url('fonts/flicktastic.woff?lsyqba') format('woff'),
-    url('fonts/flicktastic.svg?lsyqba#flicktastic') format('svg');
+  src:  url('fonts/flicktastic.eot?jdp1p7');
+  src:  url('fonts/flicktastic.eot?jdp1p7#iefix') format('embedded-opentype'),
+    url('fonts/flicktastic.ttf?jdp1p7') format('truetype'),
+    url('fonts/flicktastic.woff?jdp1p7') format('woff'),
+    url('fonts/flicktastic.svg?jdp1p7#flicktastic') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-twitter:before {
+  content: "\e906";
+}
+.icon-github:before {
+  content: "\e904";
+}
+.icon-instagram:before {
+  content: "\e905";
+}
+.icon-trending:before {
+  content: "\e903";
+  color: #ff6b6b;
+}
 .icon-bookmark:before {
   content: "\e900";
 }
@@ -33,10 +46,6 @@
 }
 .icon-trending-up:before {
   content: "\e902";
-}
-.icon-trending:before {
-  content: "\e903";
-  color: #ff6b6b;
 }
 .icon-movie:before {
   content: "\e913";

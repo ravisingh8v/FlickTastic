@@ -6,29 +6,34 @@
         </div>
         <ul class="d-flex align-items-center text-white">
             <li class="">
-                <a class="text-warning mx-4 d-flex align-items-center" routerLink="trending">
+                <a [ngClass]="{'text-warning':home}" class="text-warning mx-4 d-flex align-items-center" routerLink="trending">
                     <span class="mx-2 icon icon-trending-up"></span>
                     <span>Trending</span>
                 </a>
             </li>
             <li class="">
-                <a class=" mx-4 d-flex align-items-center" routerLink="movie">
+                <a [ngClass]="{'text-warning':movie}" class=" mx-4 d-flex align-items-center" routerLink="movie">
                     <span class="mx-2 icon icon-movie"></span>
                     <span>Movie</span>
                 </a>
             </li>
-            <li class="">
-                <a class=" mx-4 d-flex align-items-center" routerLink="series">
+            <li class="" >
+                <a [ngClass]="{'text-warning':series}" class=" mx-4 d-flex align-items-center" routerLink="series">
                     <span class="mx-2 icon icon-web-show"></span>
                     <span>Series</span>
                 </a>
             </li>
+            <li class="" >
+                <a [ngClass]="{'text-warning':search}" class=" mx-4 d-flex align-items-center" routerLink="search">
+                    <span class="mx-2 icon icon-search"></span>
+                    <span>Search</span>
+                </a>
+            </li>
         </ul>
         <div class="d-flex align-items-center text-white">
-            <form action="">
-                <span class="rounded bg-warning d-flex align-items-center"><input type="search" placeholder="search movie" class="form-control">
-                    <span class="cursor-pointer p-2 icon icon-search"></span></span>
-            </form>
+            <a href="https://www.instagram.com/ravisingh4v" target="_blank" class="mx-2"><span class="icon icon-twitter fs-4"></span></a>
+           <a href="https://twitter.com/ravisingh4v" target="_blank" class="mx-2"><span class="icon icon-instagram fs-4"></span></a>
+           <a href="https://github.com/ravisingh8v" target="_blank" class="mx-2"><span class="icon icon-github fs-4"></span></a>
         </div>
     </div>
 </header>

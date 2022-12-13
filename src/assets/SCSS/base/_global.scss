@@ -28,3 +28,36 @@ a{
     outline: none;
     box-shadow: none;
 }
+
+// custom scroll bar 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    // border-radius:5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #dbdbdb;
+    //  border-radius:5px;
+  
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #0d6efd; 
+    //  border-radius:5px;
+    
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #025be0; 
+  }
+
+//   search 
+.search-btn{
+    &:hover{
+        background-color: #f5b904 !important;
+    }
+} 
